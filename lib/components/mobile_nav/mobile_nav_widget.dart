@@ -14,6 +14,7 @@ class MobileNavWidget extends StatefulWidget {
     this.iconThree,
     this.iconFour,
     this.iconFive,
+    required this.iconSix,
   }) : super(key: key);
 
   final Widget? iconOne;
@@ -21,6 +22,7 @@ class MobileNavWidget extends StatefulWidget {
   final Widget? iconThree;
   final Widget? iconFour;
   final Widget? iconFive;
+  final Widget? iconSix;
 
   @override
   _MobileNavWidgetState createState() => _MobileNavWidgetState();

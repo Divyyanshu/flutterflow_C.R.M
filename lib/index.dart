@@ -22,3 +22,4 @@ export '/lead_capture_page/lead_capture_page_widget.dart'
     show LeadCapturePageWidget;
 export '/pages/my_team_marketplace/my_team_marketplace_widget.dart'
     show MyTeamMarketplaceWidget;
+export '/pages/leads/leads_widget.dart' show LeadsWidget;

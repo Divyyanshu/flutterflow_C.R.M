@@ -11,19 +11,19 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'my_team_model.dart';
-export 'my_team_model.dart';
+import 'leads_model.dart';
+export 'leads_model.dart';
 
-class MyTeamWidget extends StatefulWidget {
-  const MyTeamWidget({Key? key}) : super(key: key);
+class LeadsWidget extends StatefulWidget {
+  const LeadsWidget({Key? key}) : super(key: key);
 
   @override
-  _MyTeamWidgetState createState() => _MyTeamWidgetState();
+  _LeadsWidgetState createState() => _LeadsWidgetState();
 }
 
-class _MyTeamWidgetState extends State<MyTeamWidget>
+class _LeadsWidgetState extends State<LeadsWidget>
     with TickerProviderStateMixin {
-  late MyTeamModel _model;
+  late LeadsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -73,9 +73,9 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => MyTeamModel());
+    _model = createModel(context, () => LeadsModel());
 
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'myTeam'});
+    logFirebaseEvent('screen_view', parameters: {'screen_name': 'Leads'});
     _model.emailAddressController ??= TextEditingController();
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -109,7 +109,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                 automaticallyImplyLeading: false,
                 title: Text(
                   FFLocalizations.of(context).getText(
-                    'ym579y79' /* Dashboard */,
+                    'lox9j2hz' /* Dashboard */,
                   ),
                   style: FlutterFlowTheme.of(context).displaySmall.override(
                         fontFamily: 'Outfit',
@@ -218,7 +218,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                           16.0, 16.0, 0.0, 16.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '8jlklje5' /* My Team */,
+                                          'qpfk4zbt' /* Leads */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -240,18 +240,12 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                         child: TextFormField(
                                           controller:
                                               _model.emailAddressController,
-                                          onFieldSubmitted: (_) async {
-                                            logFirebaseEvent(
-                                                'MY_TEAM_emailAddress_ON_TEXTFIELD_SUBMIT');
-
-                                            context.pushNamed('searchPage');
-                                          },
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelText:
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                              '9iuss6gl' /* Search for your customers... */,
+                                              'ctcwnzqt' /* Search for your customers... */,
                                             ),
                                             labelStyle:
                                                 FlutterFlowTheme.of(context)
@@ -344,7 +338,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                         ),
                                         onPressed: () async {
                                           logFirebaseEvent(
-                                              'MY_TEAM_PAGE_search_rounded_ICN_ON_TAP');
+                                              'LEADS_PAGE_search_rounded_ICN_ON_TAP');
 
                                           context.pushNamed(
                                             'searchPage',
@@ -407,7 +401,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                '5mtplc2u' /* Member Name */,
+                                                '06pr113q' /* Member Name */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -424,7 +418,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'xsqhz5g4' /* Email */,
+                                                  '6fsgax47' /* Email */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -439,7 +433,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'xkijgi68' /* Last Active */,
+                                                  '5hjr2d94' /* Last Active */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -455,7 +449,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'dtsi2m5j' /* Date Created */,
+                                                  '23vd612p' /* Date Created */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -466,7 +460,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'qriboqj2' /* Status */,
+                                                'w7tv4da0' /* Status */,
                                               ),
                                               textAlign: TextAlign.end,
                                               style:
@@ -563,7 +557,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'yxvgnrrg' /* Alex Smith */,
+                                                                  'uk98m1e6' /* Alex Smith */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -587,7 +581,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'hbvgee7f' /* user@domainname.com */,
+                                                                      'l5zba41h' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -610,7 +604,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'cxqbcilh' /* user@domain.com */,
+                                                            'sfzoyihq' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -666,7 +660,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'mv4x7wmh' /* Status */,
+                                                              'kpfvv28c' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -793,7 +787,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'w2zw9cr7' /* Andrea Rudolph */,
+                                                                  '1ui6o6zs' /* Andrea Rudolph */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -817,7 +811,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '975lfxpw' /* user@domainname.com */,
+                                                                      'naygp2cw' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -840,7 +834,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'cr4tpu01' /* user@domain.com */,
+                                                            'z4dly1c5' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -896,7 +890,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '65466g2l' /* Status */,
+                                                              'wuu5wcxb' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1023,7 +1017,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '6wt4aamp' /* Andrea Rudolph */,
+                                                                  '6f0iwcfb' /* Andrea Rudolph */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1047,7 +1041,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'l96eacgw' /* user@domainname.com */,
+                                                                      'oqqawtg8' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1070,7 +1064,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'l2l3xguz' /* user@domain.com */,
+                                                            'iaeqrvgi' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1126,7 +1120,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'j5fz217z' /* Status */,
+                                                              'symgp09o' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1253,7 +1247,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'aa3kj1vf' /* Andrea Rudolph */,
+                                                                  '66ujo3sb' /* Andrea Rudolph */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1277,7 +1271,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'a34fke7r' /* user@domainname.com */,
+                                                                      'wnxqqvi8' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1300,7 +1294,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'anzvwh88' /* user@domain.com */,
+                                                            '009kd8to' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1356,7 +1350,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'pmybqcyj' /* Status */,
+                                                              'j7cxs3nv' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1483,7 +1477,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'ejpiipnj' /* Andrea Rudolph */,
+                                                                  'ak3jnh2y' /* Andrea Rudolph */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1507,7 +1501,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'xhwmudov' /* user@domainname.com */,
+                                                                      '9uguvbkk' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1530,7 +1524,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            '55rj4ws9' /* user@domain.com */,
+                                                            '1qqqlzp7' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1586,7 +1580,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '7fin6z7v' /* Status */,
+                                                              'kmgxref3' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1713,7 +1707,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                 FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '54fbheio' /* Andrea Rudolph */,
+                                                                  'btmk2ylb' /* Andrea Rudolph */,
                                                                 ),
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
@@ -1737,7 +1731,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      '5zdg3l5v' /* user@domainname.com */,
+                                                                      'mfes5ziq' /* user@domainname.com */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -1760,7 +1754,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'pfrreymz' /* user@domain.com */,
+                                                            '1z05c9t7' /* user@domain.com */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -1816,7 +1810,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'r47lqzrc' /* Status */,
+                                                              'k6tx0kz6' /* Status */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)

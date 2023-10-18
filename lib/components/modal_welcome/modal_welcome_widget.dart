@@ -1,3 +1,4 @@
+import '/components/logo/logo_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -217,25 +218,14 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              if (Theme.of(context).brightness ==
-                                  Brightness.light)
-                                Image.asset(
-                                  'assets/images/logo_newforceLight@3x.png',
-                                  width: 130.0,
-                                  height: 40.0,
-                                  fit: BoxFit.fitWidth,
+                              Align(
+                                alignment: AlignmentDirectional(-1.00, -1.00),
+                                child: wrapWithModel(
+                                  model: _model.logoModel,
+                                  updateCallback: () => setState(() {}),
+                                  child: LogoWidget(),
                                 ),
-                              if (Theme.of(context).brightness ==
-                                  Brightness.dark)
-                                Image.asset(
-                                  Theme.of(context).brightness ==
-                                          Brightness.dark
-                                      ? 'assets/images/logo_newforceDark_alt@3x.png'
-                                      : 'assets/images/logo_newforceLight_alt@3x.png',
-                                  width: 130.0,
-                                  height: 40.0,
-                                  fit: BoxFit.fitWidth,
-                                ),
+                              ),
                             ],
                           ).animateOnPageLoad(
                               animationsMap['rowOnPageLoadAnimation']!),

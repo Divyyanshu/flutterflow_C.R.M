@@ -1,5 +1,5 @@
 import '/components/command_palette/command_palette_widget.dart';
-import '/components/j_c_r_m_logo_widget.dart';
+import '/components/j_c_r_m_logo/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'web_nav_widget.dart' show WebNavWidget;

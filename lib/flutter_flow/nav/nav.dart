@@ -171,6 +171,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'myTeam_Marketplace',
               path: 'myTeamMarketplace',
               builder: (context, params) => MyTeamMarketplaceWidget(),
+            ),
+            FFRoute(
+              name: 'Leads',
+              path: 'leads',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Leads')
+                  : LeadsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

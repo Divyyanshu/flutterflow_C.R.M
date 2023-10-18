@@ -1,4 +1,4 @@
-import '/components/logo_widget.dart';
+import '/components/logo/logo_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -211,18 +211,14 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              if (Theme.of(context).brightness ==
-                                  Brightness.dark)
-                                Image.asset(
-                                  'assets/images/logo_newforceDark@3x.png',
-                                  width: 130.0,
-                                  height: 40.0,
-                                  fit: BoxFit.fitWidth,
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    100.0, 0.0, 0.0, 0.0),
+                                child: wrapWithModel(
+                                  model: _model.logoModel,
+                                  updateCallback: () => setState(() {}),
+                                  child: LogoWidget(),
                                 ),
-                              wrapWithModel(
-                                model: _model.logoModel,
-                                updateCallback: () => setState(() {}),
-                                child: LogoWidget(),
                               ),
                             ],
                           ).animateOnPageLoad(
@@ -274,7 +270,12 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall,
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Plus Jakarta Sans',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                          ),
                                       elevation: 2.0,
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)

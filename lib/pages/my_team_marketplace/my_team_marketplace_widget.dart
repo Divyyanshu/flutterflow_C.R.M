@@ -1,4 +1,4 @@
-import '/components/j_c_r_m_logo_widget.dart';
+import '/components/j_c_r_m_logo/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -169,10 +169,14 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    wrapWithModel(
-                                      model: _model.jCRMLogoModel,
-                                      updateCallback: () => setState(() {}),
-                                      child: JCRMLogoWidget(),
+                                    Align(
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
+                                      child: wrapWithModel(
+                                        model: _model.jCRMLogoModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: JCRMLogoWidget(),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -401,6 +405,47 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                           CrossAxisAlignment.center,
                                       children: [
                                         Icon(
+                                          Icons.groups_3_outlined,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 28.0,
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  12.0, 0.0, 0.0, 0.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'ysjn71xz' /* Leads */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .labelLarge,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 12.0),
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        8.0, 8.0, 8.0, 8.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(
                                           Icons.account_circle_rounded,
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
@@ -598,7 +643,7 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                           16.0, 16.0, 0.0, 16.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          'nomlzsz6' /* My Team */,
+                                          'nomlzsz6' /* Leads */,
                                         ),
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
@@ -670,7 +715,7 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'pb38bsqt' /* Member Name */,
+                                                'pb38bsqt' /* Leads Name */,
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
@@ -687,7 +732,7 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'g93vejry' /* Email */,
+                                                  'g93vejry' /* Title */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -702,7 +747,7 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'gq4arksg' /* Last Active */,
+                                                  'gq4arksg' /* Company */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -718,7 +763,7 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '87uuivgs' /* Date Created */,
+                                                  '87uuivgs' /* Products */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)

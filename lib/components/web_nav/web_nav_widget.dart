@@ -1,5 +1,5 @@
 import '/components/command_palette/command_palette_widget.dart';
-import '/components/j_c_r_m_logo_widget.dart';
+import '/components/j_c_r_m_logo/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -103,10 +103,17 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    wrapWithModel(
-                      model: _model.jCRMLogoModel,
-                      updateCallback: () => setState(() {}),
-                      child: JCRMLogoWidget(),
+                    Align(
+                      alignment: AlignmentDirectional(0.00, 0.00),
+                      child: Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                        child: wrapWithModel(
+                          model: _model.jCRMLogoModel,
+                          updateCallback: () => setState(() {}),
+                          child: JCRMLogoWidget(),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -264,6 +271,69 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 '5s0d776i' /* My Team */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: widget.textFive,
+                                  ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
+
+                    context.pushNamed(
+                      'myTeam',
+                      extra: <String, dynamic>{
+                        kTransitionInfoKey: TransitionInfo(
+                          hasTransition: true,
+                          transitionType: PageTransitionType.fade,
+                          duration: Duration(milliseconds: 0),
+                        ),
+                      },
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: widget.colorBgFive,
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).primaryBtnText,
+                      ),
+                    ),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.groups_3_outlined,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 28.0,
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                12.0, 0.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'wujacoac' /* Leads */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge

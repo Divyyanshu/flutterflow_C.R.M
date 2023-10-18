@@ -138,6 +138,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'Home': HomeWidget(),
       'Main_customerList': MainCustomerListWidget(),
+      'Leads': LeadsWidget(),
       'Main_Contracts': MainContractsWidget(),
       'myTeam': MyTeamWidget(),
       'Main_profilePage': MainProfilePageWidget(),
@@ -190,6 +191,20 @@ class _NavBarPageState extends State<NavBarPage> {
               ),
               label: FFLocalizations.of(context).getText(
                 '3ourv2w9' /* __ */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.star_outline,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.star_border_purple500_sharp,
+                size: 24.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                'em17z7e1' /* __ */,
               ),
               tooltip: '',
             ),

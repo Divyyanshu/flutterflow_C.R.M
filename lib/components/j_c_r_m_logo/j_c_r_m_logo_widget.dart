@@ -40,7 +40,7 @@ class _JCRMLogoWidgetState extends State<JCRMLogoWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(-1.00, -1.00),
+      alignment: AlignmentDirectional(0.00, 0.00),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Image.asset(
