@@ -396,7 +396,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                           .labelMedium,
                                       hintText:
                                           FFLocalizations.of(context).getText(
-                                        '0uknk55c' /* Enter your email here... */,
+                                        '0uknk55c' /* Enter your email here */,
                                       ),
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium,
@@ -477,7 +477,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                         .labelMedium,
                                     hintText:
                                         FFLocalizations.of(context).getText(
-                                      'eextb60x' /* Enter your email here... */,
+                                      'eextb60x' /* Enter your password here */,
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium,
@@ -562,7 +562,7 @@ class _AuthCreateWidgetState extends State<AuthCreateWidget>
                                 labelStyle:
                                     FlutterFlowTheme.of(context).labelMedium,
                                 hintText: FFLocalizations.of(context).getText(
-                                  'k8c3y3u7' /* Enter your email here... */,
+                                  'k8c3y3u7' /* Enter your password here */,
                                 ),
                                 hintStyle:
                                     FlutterFlowTheme.of(context).labelMedium,

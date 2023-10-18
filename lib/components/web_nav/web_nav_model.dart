@@ -1,5 +1,5 @@
 import '/components/command_palette/command_palette_widget.dart';
-import '/components/logo_widget.dart';
+import '/components/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'web_nav_widget.dart' show WebNavWidget;
@@ -10,17 +10,17 @@ import 'package:provider/provider.dart';
 class WebNavModel extends FlutterFlowModel<WebNavWidget> {
   ///  State fields for stateful widgets in this component.
 
-  // Model for logo component.
-  late LogoModel logoModel;
+  // Model for JCRM_logo component.
+  late JCRMLogoModel jCRMLogoModel;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
-    logoModel = createModel(context, () => LogoModel());
+    jCRMLogoModel = createModel(context, () => JCRMLogoModel());
   }
 
   void dispose() {
-    logoModel.dispose();
+    jCRMLogoModel.dispose();
   }
 
   /// Action blocks are added here.

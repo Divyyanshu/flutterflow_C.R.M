@@ -1,5 +1,5 @@
 import '/components/command_palette/command_palette_widget.dart';
-import '/components/logo_widget.dart';
+import '/components/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -104,9 +104,9 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     wrapWithModel(
-                      model: _model.logoModel,
+                      model: _model.jCRMLogoModel,
                       updateCallback: () => setState(() {}),
-                      child: LogoWidget(),
+                      child: JCRMLogoWidget(),
                     ),
                   ],
                 ),

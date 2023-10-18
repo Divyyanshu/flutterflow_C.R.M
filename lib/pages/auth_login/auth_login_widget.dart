@@ -373,10 +373,13 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  wrapWithModel(
-                                    model: _model.logoModel,
-                                    updateCallback: () => setState(() {}),
-                                    child: LogoWidget(),
+                                  Align(
+                                    alignment: AlignmentDirectional(0.00, 0.00),
+                                    child: wrapWithModel(
+                                      model: _model.logoModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: LogoWidget(),
+                                    ),
                                   ),
                                 ],
                               ).animateOnPageLoad(
@@ -425,7 +428,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                                   .labelMedium,
                                           hintText: FFLocalizations.of(context)
                                               .getText(
-                                            'f4xxyrqv' /* Enter your email here... */,
+                                            'f4xxyrqv' /* Enter your email here */,
                                           ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
@@ -514,7 +517,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                             .labelMedium,
                                         hintText:
                                             FFLocalizations.of(context).getText(
-                                          'wt8sx5du' /* Enter your password here... */,
+                                          'wt8sx5du' /* Enter your password here */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
@@ -632,20 +635,8 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                     onPressed: () async {
                                       logFirebaseEvent(
                                           'AUTH_LOGIN_PAGE_Button-Login_ON_TAP');
-                                      GoRouter.of(context).prepareAuthEvent();
 
-                                      final user =
-                                          await authManager.signInWithEmail(
-                                        context,
-                                        _model.emailAddressController.text,
-                                        _model.passwordController.text,
-                                      );
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      context.goNamedAuth(
-                                          'Home', context.mounted);
+                                      context.pushNamed('Home');
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       'm9klj9ah' /* Login */,

@@ -155,7 +155,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'ای میل اڈریس',
     },
     'f4xxyrqv': {
-      'en': 'Enter your email here...',
+      'en': 'Enter your email here',
       'bn': 'এখানে আপনার ইমেল ঠিকানা লিখুন...',
       'hi': 'अपना ई मेल यहा भरे...',
       'ml': 'നിങ്ങളുടെ ഇമെയിൽ ഇവിടെ നൽകുക...',
@@ -175,7 +175,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پاس ورڈ',
     },
     'wt8sx5du': {
-      'en': 'Enter your password here...',
+      'en': 'Enter your password here',
       'bn': 'এখানে আপনার পাসওয়ার্ড লিখুন...',
       'hi': 'यहां अपना पासवर्ड डालें...',
       'ml': 'നിങ്ങളുടെ പാസ്‌വേഡ് ഇവിടെ നൽകുക...',
@@ -389,7 +389,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'ای میل اڈریس',
     },
     '0uknk55c': {
-      'en': 'Enter your email here...',
+      'en': 'Enter your email here',
       'bn': 'এখানে আপনার ইমেল ঠিকানা লিখুন...',
       'hi': 'अपना ई मेल यहा भरे...',
       'ml': 'നിങ്ങളുടെ ഇമെയിൽ ഇവിടെ നൽകുക...',
@@ -409,7 +409,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پاس ورڈ',
     },
     'eextb60x': {
-      'en': 'Enter your email here...',
+      'en': 'Enter your password here',
       'bn': 'এখানে আপনার ইমেল ঠিকানা লিখুন...',
       'hi': 'अपना ई मेल यहा भरे...',
       'ml': 'നിങ്ങളുടെ ഇമെയിൽ ഇവിടെ നൽകുക...',
@@ -429,7 +429,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': 'پاس ورڈ کی تصدیق کریں۔',
     },
     'k8c3y3u7': {
-      'en': 'Enter your email here...',
+      'en': 'Enter your password here',
       'bn': 'এখানে আপনার ইমেল ঠিকানা লিখুন...',
       'hi': 'अपना ई मेल यहा भरे...',
       'ml': 'നിങ്ങളുടെ ഇമെയിൽ ഇവിടെ നൽകുക...',

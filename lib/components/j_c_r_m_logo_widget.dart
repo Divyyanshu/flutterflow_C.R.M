@@ -3,18 +3,18 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'logo_model.dart';
-export 'logo_model.dart';
+import 'j_c_r_m_logo_model.dart';
+export 'j_c_r_m_logo_model.dart';
 
-class LogoWidget extends StatefulWidget {
-  const LogoWidget({Key? key}) : super(key: key);
+class JCRMLogoWidget extends StatefulWidget {
+  const JCRMLogoWidget({Key? key}) : super(key: key);
 
   @override
-  _LogoWidgetState createState() => _LogoWidgetState();
+  _JCRMLogoWidgetState createState() => _JCRMLogoWidgetState();
 }
 
-class _LogoWidgetState extends State<LogoWidget> {
-  late LogoModel _model;
+class _JCRMLogoWidgetState extends State<JCRMLogoWidget> {
+  late JCRMLogoModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -25,7 +25,7 @@ class _LogoWidgetState extends State<LogoWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => LogoModel());
+    _model = createModel(context, () => JCRMLogoModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -45,8 +45,8 @@ class _LogoWidgetState extends State<LogoWidget> {
         borderRadius: BorderRadius.circular(8.0),
         child: Image.asset(
           Theme.of(context).brightness == Brightness.dark
-              ? 'assets/images/logo_main-removebg-preview.png'
-              : 'assets/images/logo_main-removebg-preview.png',
+              ? 'assets/images/logo_3-removebg-preview.png'
+              : 'assets/images/logo_3-removebg-preview.png',
           width: 125.0,
           height: 140.0,
           fit: BoxFit.cover,

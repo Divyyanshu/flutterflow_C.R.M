@@ -1,3 +1,4 @@
+import '/components/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -168,14 +169,10 @@ class _MyTeamMarketplaceWidgetState extends State<MyTeamMarketplaceWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Image.asset(
-                                      Theme.of(context).brightness ==
-                                              Brightness.dark
-                                          ? 'assets/images/logo_newforceDark_alt@3x.png'
-                                          : 'assets/images/logo_newforceLight_alt@3x.png',
-                                      width: 170.0,
-                                      height: 44.0,
-                                      fit: BoxFit.fitWidth,
+                                    wrapWithModel(
+                                      model: _model.jCRMLogoModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: JCRMLogoWidget(),
                                     ),
                                   ],
                                 ),

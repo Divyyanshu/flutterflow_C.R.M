@@ -5,12 +5,12 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: "AIzaSyBYCs0NxII3E-8kHmh5inFRTL14RViWxys",
-            authDomain: "dashboardapps-57b1c.firebaseapp.com",
-            projectId: "dashboardapps-57b1c",
-            storageBucket: "dashboardapps-57b1c.appspot.com",
-            messagingSenderId: "813406409653",
-            appId: "1:813406409653:web:964d59810ad8959fe4bffc"));
+            apiKey: "AIzaSyB_7dNUqYSROrRzvYkevRg1PN7BcFlr24E",
+            authDomain: "crm-responsiveapp.firebaseapp.com",
+            projectId: "crm-responsiveapp",
+            storageBucket: "crm-responsiveapp.appspot.com",
+            messagingSenderId: "139612119586",
+            appId: "1:139612119586:web:d468912bc6ddb03f34607b"));
   } else {
     await Firebase.initializeApp();
   }
