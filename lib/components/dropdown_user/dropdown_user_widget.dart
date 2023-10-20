@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -54,6 +55,9 @@ class _DropdownUserWidgetState extends State<DropdownUserWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => DropdownUserModel());
+
+    _model.expandableController1 = ExpandableController(initialExpanded: true);
+    _model.expandableController2 = ExpandableController(initialExpanded: false);
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -136,7 +140,7 @@ class _DropdownUserWidgetState extends State<DropdownUserWidget>
                         width: double.infinity,
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         child: ExpandableNotifier(
-                          initialExpanded: true,
+                          controller: _model.expandableController1,
                           child: ExpandablePanel(
                             header: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -469,7 +473,7 @@ class _DropdownUserWidgetState extends State<DropdownUserWidget>
                       width: double.infinity,
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       child: ExpandableNotifier(
-                        initialExpanded: false,
+                        controller: _model.expandableController2,
                         child: ExpandablePanel(
                           header: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(

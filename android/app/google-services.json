@@ -7,12 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:139612119586:android:e78211e1c13ca95434607b",
+        "mobilesdk_app_id": "1:139612119586:android:70172bfade005d3634607b",
         "android_client_info": {
           "package_name": "com.mycompany.crmapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "139612119586-vqs6cmv0evt8f9embbd0n4i6u8q0ard7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAK8hlZhS9I2OMqXBHAzaqDaIRRa_zut_8"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139612119586-7bnioomb7edesc09n703k494hgvl1087.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139612119586-0sudojq2d0u39baler4hse9fpjld524l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.crmapp"
+              }
+            }
+          ]
         }
       }
     }

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import '../../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
@@ -21,7 +21,7 @@ class LoginCall {
   static Future<ApiCallResponse> call({
     String? username = '',
     String? password = '',
-  }) {
+  }) async {
     final ffApiRequestBody = '''
 {
    "username":"${username}",
@@ -41,6 +41,30 @@ class LoginCall {
       cache: false,
     );
   }
+}
+
+class ApiSearchMemberCall {
+  static Future<ApiCallResponse> call({
+    String? searchValue = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'api search member ',
+      apiUrl: 'https://dummyjson.com/products/search?q=${searchValue}',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+
+  static dynamic searchData(dynamic response) => getJsonField(
+        response,
+        r'''$.products''',
+        true,
+      );
 }
 
 class ApiPagingParams {

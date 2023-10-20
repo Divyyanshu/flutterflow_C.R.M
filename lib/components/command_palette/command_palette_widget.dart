@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -64,6 +65,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
     _model = createModel(context, () => CommandPaletteModel());
 
     _model.textController ??= TextEditingController();
+    _model.textFieldFocusNode ??= FocusNode();
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -185,6 +187,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                     Expanded(
                                       child: TextFormField(
                                         controller: _model.textController,
+                                        focusNode: _model.textFieldFocusNode,
                                         autofocus: true,
                                         obscureText: false,
                                         decoration: InputDecoration(

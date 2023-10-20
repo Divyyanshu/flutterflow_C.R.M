@@ -8,6 +8,7 @@ import 'auth_login_widget.dart' show AuthLoginWidget;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,9 +22,11 @@ class AuthLoginModel extends FlutterFlowModel<AuthLoginWidget> {
   // Model for logo component.
   late LogoModel logoModel;
   // State field(s) for emailAddress widget.
+  FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressController;
   String? Function(BuildContext, String?)? emailAddressControllerValidator;
   // State field(s) for password widget.
+  FocusNode? passwordFocusNode;
   TextEditingController? passwordController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordControllerValidator;
@@ -38,7 +41,10 @@ class AuthLoginModel extends FlutterFlowModel<AuthLoginWidget> {
   void dispose() {
     unfocusNode.dispose();
     logoModel.dispose();
+    emailAddressFocusNode?.dispose();
     emailAddressController?.dispose();
+
+    passwordFocusNode?.dispose();
     passwordController?.dispose();
   }
 

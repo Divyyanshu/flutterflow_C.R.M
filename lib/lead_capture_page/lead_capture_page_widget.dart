@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'lead_capture_page_model.dart';
@@ -27,9 +28,13 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
     logFirebaseEvent('screen_view',
         parameters: {'screen_name': 'leadCapturePage'});
     _model.customerNameController ??= TextEditingController();
+    _model.customerNameFocusNode ??= FocusNode();
     _model.customerEmailController ??= TextEditingController();
+    _model.customerEmailFocusNode ??= FocusNode();
     _model.textController3 ??= TextEditingController();
+    _model.textFieldFocusNode1 ??= FocusNode();
     _model.textController4 ??= TextEditingController();
+    _model.textFieldFocusNode2 ??= FocusNode();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -42,6 +47,15 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -81,6 +95,7 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: TextFormField(
                     controller: _model.customerNameController,
+                    focusNode: _model.customerNameFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
@@ -130,6 +145,7 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: TextFormField(
                     controller: _model.customerEmailController,
+                    focusNode: _model.customerEmailFocusNode,
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
@@ -179,6 +195,7 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: TextFormField(
                     controller: _model.textController3,
+                    focusNode: _model.textFieldFocusNode1,
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
@@ -228,6 +245,7 @@ class _LeadCapturePageWidgetState extends State<LeadCapturePageWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: TextFormField(
                     controller: _model.textController4,
+                    focusNode: _model.textFieldFocusNode2,
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(

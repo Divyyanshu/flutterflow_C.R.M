@@ -6,8 +6,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -77,6 +79,7 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'myTeam'});
     _model.emailAddressController ??= TextEditingController();
+    _model.emailAddressFocusNode ??= FocusNode();
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -96,6 +99,15 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -174,6 +186,11 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                         colorBgFive:
                             FlutterFlowTheme.of(context).primaryBackground,
                         textFive: FlutterFlowTheme.of(context).primaryText,
+                        iconSix: Icon(
+                          Icons.groups_3,
+                          color: FlutterFlowTheme.of(context).primary,
+                        ),
+                        textSix: FlutterFlowTheme.of(context).secondaryText,
                       ),
                     ),
                   Expanded(
@@ -240,11 +257,18 @@ class _MyTeamWidgetState extends State<MyTeamWidget>
                                         child: TextFormField(
                                           controller:
                                               _model.emailAddressController,
+                                          focusNode:
+                                              _model.emailAddressFocusNode,
+                                          onChanged: (_) =>
+                                              EasyDebounce.debounce(
+                                            '_model.emailAddressController',
+                                            Duration(milliseconds: 300),
+                                            () => setState(() {}),
+                                          ),
                                           onFieldSubmitted: (_) async {
                                             logFirebaseEvent(
                                                 'MY_TEAM_emailAddress_ON_TEXTFIELD_SUBMIT');
-
-                                            context.pushNamed('searchPage');
+                                            Navigator.pop(context);
                                           },
                                           obscureText: false,
                                           decoration: InputDecoration(

@@ -137,10 +137,10 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Home': HomeWidget(),
-      'Main_customerList': MainCustomerListWidget(),
-      'Leads': LeadsWidget(),
-      'Main_Contracts': MainContractsWidget(),
       'myTeam': MyTeamWidget(),
+      'Main_Contracts': MainContractsWidget(),
+      'leads': LeadsWidget(),
+      'Main_customerList': MainCustomerListWidget(),
       'Main_profilePage': MainProfilePageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
@@ -150,7 +150,6 @@ class _NavBarPageState extends State<NavBarPage> {
       bottomNavigationBar: Visibility(
         visible: responsiveVisibility(
           context: context,
-          tabletLandscape: false,
           desktop: false,
         ),
         child: BottomNavigationBar(
@@ -182,29 +181,15 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.supervised_user_circle_outlined,
+                Icons.stream,
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.supervised_user_circle_sharp,
-                size: 32.0,
-              ),
-              label: FFLocalizations.of(context).getText(
-                '3ourv2w9' /* __ */,
-              ),
-              tooltip: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.star_outline,
-                size: 24.0,
-              ),
-              activeIcon: Icon(
-                Icons.star_border_purple500_sharp,
+                Icons.stream,
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'em17z7e1' /* __ */,
+                'smtxdnbn' /* __ */,
               ),
               tooltip: '',
             ),
@@ -224,15 +209,29 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.stream,
+                Icons.star_rate,
                 size: 24.0,
               ),
               activeIcon: Icon(
-                Icons.stream,
+                Icons.star_rounded,
                 size: 24.0,
               ),
               label: FFLocalizations.of(context).getText(
-                'smtxdnbn' /* __ */,
+                'xtvotuit' /* Leads */,
+              ),
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.supervised_user_circle_outlined,
+                size: 24.0,
+              ),
+              activeIcon: Icon(
+                Icons.supervised_user_circle_sharp,
+                size: 32.0,
+              ),
+              label: FFLocalizations.of(context).getText(
+                '3ourv2w9' /* __ */,
               ),
               tooltip: '',
             ),

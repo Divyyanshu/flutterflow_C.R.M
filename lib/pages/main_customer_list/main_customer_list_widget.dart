@@ -9,6 +9,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -282,6 +283,15 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -347,6 +357,11 @@ class _MainCustomerListWidgetState extends State<MainCustomerListWidget>
                   ),
                   colorBgFive: FlutterFlowTheme.of(context).secondaryBackground,
                   textFive: FlutterFlowTheme.of(context).secondaryText,
+                  iconSix: Icon(
+                    Icons.groups_3,
+                    color: FlutterFlowTheme.of(context).primary,
+                  ),
+                  textSix: FlutterFlowTheme.of(context).secondaryText,
                 ),
               ),
             Expanded(

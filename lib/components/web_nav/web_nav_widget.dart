@@ -3,6 +3,7 @@ import '/components/j_c_r_m_logo/j_c_r_m_logo_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'web_nav_model.dart';
@@ -26,6 +27,9 @@ class WebNavWidget extends StatefulWidget {
     this.iconFive,
     this.colorBgFive,
     this.textFive,
+    this.colorBgSix,
+    required this.iconSix,
+    this.textSix,
   }) : super(key: key);
 
   final Widget? iconOne;
@@ -43,6 +47,9 @@ class WebNavWidget extends StatefulWidget {
   final Widget? iconFive;
   final Color? colorBgFive;
   final Color? textFive;
+  final Color? colorBgSix;
+  final Widget? iconSix;
+  final Color? textSix;
 
   @override
   _WebNavWidgetState createState() => _WebNavWidgetState();
@@ -297,7 +304,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                     logFirebaseEvent('WEB_NAV_COMP_bg_color_ON_TAP');
 
                     context.pushNamed(
-                      'myTeam',
+                      'leads',
                       extra: <String, dynamic>{
                         kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
@@ -310,11 +317,8 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                   child: Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: widget.colorBgFive,
+                      color: widget.colorBgSix,
                       borderRadius: BorderRadius.circular(8.0),
-                      border: Border.all(
-                        color: FlutterFlowTheme.of(context).primaryBtnText,
-                      ),
                     ),
                     child: Padding(
                       padding:
@@ -339,7 +343,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                                   .bodyLarge
                                   .override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: widget.textFive,
+                                    color: widget.textSix,
                                   ),
                             ),
                           ),
@@ -381,6 +385,7 @@ class _WebNavWidgetState extends State<WebNavWidget> {
                           EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           widget.iconTwo!,

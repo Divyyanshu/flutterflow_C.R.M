@@ -7,8 +7,10 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'my_team_widget.dart' show MyTeamWidget;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -20,6 +22,7 @@ class MyTeamModel extends FlutterFlowModel<MyTeamWidget> {
   // Model for webNav component.
   late WebNavModel webNavModel;
   // State field(s) for emailAddress widget.
+  FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressController;
   String? Function(BuildContext, String?)? emailAddressControllerValidator;
 
@@ -32,6 +35,7 @@ class MyTeamModel extends FlutterFlowModel<MyTeamWidget> {
   void dispose() {
     unfocusNode.dispose();
     webNavModel.dispose();
+    emailAddressFocusNode?.dispose();
     emailAddressController?.dispose();
   }
 

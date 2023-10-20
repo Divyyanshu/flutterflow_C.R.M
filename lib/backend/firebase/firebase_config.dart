@@ -10,7 +10,7 @@ Future initFirebase() async {
             projectId: "crm-responsiveapp",
             storageBucket: "crm-responsiveapp.appspot.com",
             messagingSenderId: "139612119586",
-            appId: "1:139612119586:web:d468912bc6ddb03f34607b"));
+            appId: "1:139612119586:web:631d1316c6129f8c34607b"));
   } else {
     await Firebase.initializeApp();
   }

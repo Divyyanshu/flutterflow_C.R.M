@@ -2963,9 +2963,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '__',
     },
   },
-  // Leads
+  // leads
   {
-    'qpfk4zbt': {
+    'jlv68ymu': {
       'en': 'Leads',
       'bn': 'আমার দল',
       'hi': 'मेरी टीम',
@@ -2975,7 +2975,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'నా జట్టు',
       'ur': 'میری ٹیم',
     },
-    'ctcwnzqt': {
+    '7e1btvvr': {
       'en': 'Search for your customers...',
       'bn': 'আপনার গ্রাহকদের জন্য অনুসন্ধান করুন...',
       'hi': 'अपने ग्राहकों को खोजें...',
@@ -2985,7 +2985,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'మీ కస్టమర్ల కోసం శోధించండి...',
       'ur': 'اپنے گاہکوں کو تلاش کریں...',
     },
-    '06pr113q': {
+    '9etztgcd': {
       'en': 'Member Name',
       'bn': 'সদস্যের নাম',
       'hi': 'सदस्य का नाम',
@@ -2995,7 +2995,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'సభ్యుని పేరు',
       'ur': 'رکن کا نام',
     },
-    '6fsgax47': {
+    'h8qxjk94': {
       'en': 'Email',
       'bn': 'ইমেইল',
       'hi': 'ईमेल',
@@ -3005,7 +3005,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఇమెయిల్',
       'ur': 'ای میل',
     },
-    '5hjr2d94': {
+    '29a9f5lw': {
       'en': 'Last Active',
       'bn': 'সর্বশেষ সক্রিয়',
       'hi': 'अंतिम सक्रिय',
@@ -3015,7 +3015,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'చివరి యాక్టివ్',
       'ur': 'آخری فعال',
     },
-    '23vd612p': {
+    '0xgsfpw2': {
       'en': 'Date Created',
       'bn': 'তারিখ বনাও',
       'hi': 'बनाया गया दिनांक',
@@ -3025,7 +3025,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'తేదీ సృష్టించబడింది',
       'ur': 'تاریخ تخلیق',
     },
-    'w7tv4da0': {
+    'en932eqo': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3035,7 +3035,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    'uk98m1e6': {
+    '0ckjcc2z': {
       'en': 'Alex Smith',
       'bn': 'অ্যালেক্স স্মিথ',
       'hi': 'एलेक्स स्मिथ',
@@ -3045,7 +3045,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'అలెక్స్ స్మిత్',
       'ur': 'الیکس اسمتھ',
     },
-    'l5zba41h': {
+    'ecsguv47': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3055,7 +3055,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    'sfzoyihq': {
+    'ekagqywf': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3065,7 +3065,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'kpfvv28c': {
+    '0e1pec2w': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3075,7 +3075,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    '1ui6o6zs': {
+    'auklft0a': {
       'en': 'Andrea Rudolph',
       'bn': 'আন্দ্রেয়া রুডলফ',
       'hi': 'एंड्रिया रूडोल्फ',
@@ -3085,7 +3085,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఆండ్రియా రుడాల్ఫ్',
       'ur': 'اینڈریا روڈولف',
     },
-    'naygp2cw': {
+    'nhcjsjnm': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3095,7 +3095,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    'z4dly1c5': {
+    'zczd4khm': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3105,7 +3105,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'wuu5wcxb': {
+    'h9v7m9er': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3115,7 +3115,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    '6f0iwcfb': {
+    'jc2tl1ao': {
       'en': 'Andrea Rudolph',
       'bn': 'আন্দ্রেয়া রুডলফ',
       'hi': 'एंड्रिया रूडोल्फ',
@@ -3125,7 +3125,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఆండ్రియా రుడాల్ఫ్',
       'ur': 'اینڈریا روڈولف',
     },
-    'oqqawtg8': {
+    '3wgii5ig': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3135,7 +3135,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    'iaeqrvgi': {
+    'qzehni9p': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3145,7 +3145,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'symgp09o': {
+    'oezf71il': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3155,7 +3155,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    '66ujo3sb': {
+    'lk00gxb9': {
       'en': 'Andrea Rudolph',
       'bn': 'আন্দ্রেয়া রুডলফ',
       'hi': 'एंड्रिया रूडोल्फ',
@@ -3165,7 +3165,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఆండ్రియా రుడాల్ఫ్',
       'ur': 'اینڈریا روڈولف',
     },
-    'wnxqqvi8': {
+    '3xegl0bj': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3175,7 +3175,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    '009kd8to': {
+    '1zpocrni': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3185,7 +3185,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'j7cxs3nv': {
+    'swi3k4ah': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3195,7 +3195,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    'ak3jnh2y': {
+    'nrxtvfn2': {
       'en': 'Andrea Rudolph',
       'bn': 'আন্দ্রেয়া রুডলফ',
       'hi': 'एंड्रिया रूडोल्फ',
@@ -3205,7 +3205,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఆండ్రియా రుడాల్ఫ్',
       'ur': 'اینڈریا روڈولف',
     },
-    '9uguvbkk': {
+    'z0tlthlh': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3215,7 +3215,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    '1qqqlzp7': {
+    '0un55n87': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3225,7 +3225,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'kmgxref3': {
+    'e557g8cg': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3235,7 +3235,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    'btmk2ylb': {
+    'wzt75jlh': {
       'en': 'Andrea Rudolph',
       'bn': 'আন্দ্রেয়া রুডলফ',
       'hi': 'एंड्रिया रूडोल्फ',
@@ -3245,7 +3245,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'ఆండ్రియా రుడాల్ఫ్',
       'ur': 'اینڈریا روڈولف',
     },
-    'mfes5ziq': {
+    '1ps6s554': {
       'en': 'user@domainname.com',
       'bn': 'user@domainname.com',
       'hi': 'user@domainname.com',
@@ -3255,7 +3255,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domainame.com',
       'ur': 'user@domainname.com',
     },
-    '1z05c9t7': {
+    'n6782t3o': {
       'en': 'user@domain.com',
       'bn': 'user@domain.com',
       'hi': 'user@domain.com',
@@ -3265,7 +3265,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'user@domain.com',
       'ur': 'user@domain.com',
     },
-    'k6tx0kz6': {
+    'hz6eztwt': {
       'en': 'Status',
       'bn': 'স্ট্যাটাস',
       'hi': 'दर्जा',
@@ -3275,25 +3275,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': 'స్థితి',
       'ur': 'حالت',
     },
-    'lox9j2hz': {
-      'en': 'Dashboard',
-      'bn': 'ড্যাশবোর্ড',
-      'hi': 'डैशबोर्ड',
-      'ml': 'ഡാഷ്ബോർഡ്',
-      'or': 'ଡ୍ୟାସବୋର୍ଡ |',
-      'ta': 'டாஷ்போர்டு',
-      'te': 'డాష్బోర్డ్',
-      'ur': 'ڈیش بورڈ',
-    },
-    'em17z7e1': {
-      'en': '__',
-      'bn': '__',
-      'hi': '__',
-      'ml': '__',
-      'or': '__',
-      'ta': '__',
-      'te': '__',
-      'ur': '__',
+    'xtvotuit': {
+      'en': 'Leads',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
     },
   },
   // modal_success
@@ -3585,6 +3575,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ta': 'சுயவிவரம்',
       'te': 'ప్రొఫైల్',
       'ur': 'پروفائل',
+    },
+    '4ytskcg8': {
+      'en': 'Leads',
+      'bn': 'আমার দল',
+      'hi': 'मेरी टीम',
+      'ml': 'എന്റെ സംഘം',
+      'or': 'ମୋ ଦଳ',
+      'ta': 'என் அணி',
+      'te': 'నా జట్టు',
+      'ur': 'میری ٹیم',
     },
   },
   // webNav
@@ -4029,6 +4029,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'te': '',
       'ur': '',
     },
+    'w34x7s8v': {
+      'en': '',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    '9assgpal': {
+      'en': '',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
     'kcvqa08x': {
       'en': '',
       'bn': '',
@@ -4120,6 +4140,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ur': '',
     },
     'd1wdf5i1': {
+      'en': '',
+      'bn': '',
+      'hi': '',
+      'ml': '',
+      'or': '',
+      'ta': '',
+      'te': '',
+      'ur': '',
+    },
+    'bdpmn2uo': {
       'en': '',
       'bn': '',
       'hi': '',

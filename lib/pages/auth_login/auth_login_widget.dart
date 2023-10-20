@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -298,7 +299,9 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
 
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'auth_Login'});
     _model.emailAddressController ??= TextEditingController();
+    _model.emailAddressFocusNode ??= FocusNode();
     _model.passwordController ??= TextEditingController();
+    _model.passwordFocusNode ??= FocusNode();
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -318,6 +321,15 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -417,6 +429,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                       child: TextFormField(
                                         controller:
                                             _model.emailAddressController,
+                                        focusNode: _model.emailAddressFocusNode,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           labelText: FFLocalizations.of(context)
@@ -507,6 +520,7 @@ class _AuthLoginWidgetState extends State<AuthLoginWidget>
                                   Expanded(
                                     child: TextFormField(
                                       controller: _model.passwordController,
+                                      focusNode: _model.passwordFocusNode,
                                       obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
                                         labelText:

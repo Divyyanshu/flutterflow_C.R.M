@@ -6,7 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 
-import '../../auth/base_auth_user_provider.dart';
+import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
 import '/main.dart';
@@ -173,10 +173,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MyTeamMarketplaceWidget(),
             ),
             FFRoute(
-              name: 'Leads',
+              name: 'leads',
               path: 'leads',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Leads')
+                  ? NavBarPage(initialPage: 'leads')
                   : LeadsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
@@ -360,10 +360,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: FlutterFlowTheme.of(context).primary,
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
                   child: Image.asset(
-                    'assets/images/splash_app_CRM_alt@2x.png',
-                    fit: BoxFit.scaleDown,
+                    'assets/images/logo_main-removebg-preview.png',
+                    fit: BoxFit.contain,
                   ),
                 )
               : page;
